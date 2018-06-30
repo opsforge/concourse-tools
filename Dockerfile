@@ -2,8 +2,8 @@
 
 FROM ubuntu:18.04
 
-ENV TFVER="0.11.6"
-ENV BOSHVER="3.0.1"
+ENV TFVER="0.11.7"
+ENV BOSHVER="4.0.1"
 
 MAINTAINER opsforge.io
 LABEL name="concourse-tools"
