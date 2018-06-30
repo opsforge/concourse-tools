@@ -43,3 +43,10 @@ RUN cd /tmp && \
     curl -L -o cf.deb "https://cli.run.pivotal.io/stable?release=debian64&source=github" && \
     dpkg -i cf.deb && \
     rm -rf /tmp/*
+
+# Install Ruby stable
+
+RUN cd /tmp && \
+    curl -sSL https://rvm.io/mpapis.asc | gpg --import - && \
+    curl -sSL https://get.rvm.io | bash -s stable --ruby && \
+    rm -rf /tmp/*
