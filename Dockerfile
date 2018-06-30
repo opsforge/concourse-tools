@@ -1,6 +1,6 @@
 # Dockerfile for Concourse CI pipelines tools image (C) opsforge 2018
 
-FROM ubuntu:18.04
+FROM ruby:2.4-stretch
 
 ENV TFVER="0.11.7"
 ENV BOSHVER="4.0.1"
@@ -44,9 +44,4 @@ RUN cd /tmp && \
     dpkg -i cf.deb && \
     rm -rf /tmp/*
 
-# Install Ruby stable
 
-RUN cd /tmp && \
-    curl -sSL https://rvm.io/mpapis.asc | gpg --import - && \
-    curl -sSL https://get.rvm.io | bash -s stable --ruby && \
-    rm -rf /tmp/*
