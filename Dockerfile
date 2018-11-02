@@ -1,13 +1,13 @@
 # Dockerfile for Concourse CI pipelines tools image (C) opsforge 2018
 
-FROM ruby:2.4-stretch
+FROM ruby:2.5-stretch
 
-ENV TFVER="0.11.7"
+ENV TFVER="0.11.10"
 ENV BOSHVER="4.0.1"
 
 MAINTAINER opsforge.io
 LABEL name="concourse-tools"
-LABEL version="0.1.0"
+LABEL version="0.1.1"
 LABEL type="minimal"
 
 # Ubuntu package installs
