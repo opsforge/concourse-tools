@@ -1,6 +1,6 @@
 # Dockerfile for Concourse CI pipelines tools image (C) opsforge 2018
 
-FROM ruby:2.5-stretch
+FROM ruby:2.4-stretch
 
 ENV TFVER="0.11.10"
 ENV BOSHVER="4.0.1"
