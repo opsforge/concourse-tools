@@ -14,7 +14,7 @@ LABEL type="minimal"
 
 USER root
 RUN apt-get update && \
-    apt-get -y install zip git jq python-pip unzip pwgen groff curl wget && \
+    apt-get -y install zip git jq python-pip unzip pwgen groff curl wget sshpass dig && \
     apt-get clean
     
 # PIP package installs
