@@ -8,14 +8,14 @@ ENV OMVER="0.44.0"
 
 MAINTAINER opsforge.io
 LABEL name="concourse-tools"
-LABEL version="0.1.1"
+LABEL version="0.2.0"
 LABEL type="minimal"
 
 # Ubuntu package installs
 
 USER root
 RUN apt-get update && \
-    apt-get -y install zip git jq python-pip unzip pwgen groff curl wget sshpass dig && \
+    apt-get -y install zip git jq python-pip unzip pwgen groff curl wget sshpass dnsutils && \
     apt-get clean
 
 # PIP package installs
