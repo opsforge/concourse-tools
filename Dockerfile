@@ -49,7 +49,8 @@ RUN cd /tmp && \
 # Install OM CLI
 
 RUN cd /tmp && \
-    curl -L -o om "https://github.com/pivotal-cf/om/releases/download/${OMVER}/om-linux" && \
-    chmod +x om && \
-    mv om /usr/local/bin/om && \
+    curl -L -o om-linux "https://github.com/pivotal-cf/om/releases/download/${OMVER}/om-linux" && \
+    chmod +x om-linux && \
+    mv om-linux /usr/local/bin/om-linux && \
+    ln -s /usr/local/bin/om /usr/local/bin/om-linux && \
     rm -rf /tmp/*
