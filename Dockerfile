@@ -2,13 +2,13 @@
 
 FROM ruby:2.4-stretch
 
-ENV TFVER="0.11.10"
-ENV BOSHVER="4.0.1"
-ENV OMVER="0.44.0"
+ENV TFVER="0.11.14"
+ENV BOSHVER="5.5.0"
+ENV OMVER="1.0.0"
 
 MAINTAINER opsforge.io
 LABEL name="concourse-tools"
-LABEL version="0.2.0"
+LABEL version="0.3.0"
 LABEL type="minimal"
 
 # Ubuntu package installs
@@ -16,6 +16,7 @@ LABEL type="minimal"
 USER root
 RUN apt-get update && \
     apt-get -y install zip git jq python-pip unzip pwgen groff curl wget sshpass dnsutils && \
+    cp $(which jq) /usr/bin/jq-15 && \
     apt-get clean
 
 # PIP package installs
